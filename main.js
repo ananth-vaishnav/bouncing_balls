@@ -1,7 +1,3 @@
-
-
-// setup canvas
-
 const para = document.querySelector('p');
 let count = 0;
 
@@ -11,14 +7,13 @@ const ctx = canvas.getContext('2d');
 const width = canvas.width = window.innerWidth;
 const height = canvas.height = window.innerHeight;
 
-// function to generate random number
 
 function random(min,max) {
   const num = Math.floor(Math.random()*(max-min)) + min;
   return num;
 };
 
-// function to generate random RGB color value
+
 
 function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
@@ -73,7 +68,6 @@ class Ball extends Shape {
     this.y += this.velY;
   }
 
-// function to detect collition
 
   collisionDetect() {
      for (const ball of balls) {
@@ -161,7 +155,6 @@ class EvilCircle extends Shape {
 
 }
 
-// define array to store balls and populate it
 
 const balls = [];
 
